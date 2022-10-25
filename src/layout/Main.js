@@ -1,5 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Course from '../Pages/Course/Course';
+import Home from '../Pages/Home/Home';
 import Header from '../Pages/Shared/Header/Header';
 import Right from '../Pages/Shared/Right/Right';
 
@@ -14,6 +16,8 @@ const Main = () => {
                 <div class="row">
                     <div class="col-sm-8">
                         <Outlet>
+                            <Home></Home>
+                            <Course></Course>
 
                         </Outlet>
 
