@@ -16,7 +16,7 @@ useEffect(()=>{
             {
                 data.map(dataAll=><h4 className='border border-primary rounded ' key={dataAll.id}>
                     
-                <Link  to={`/course/${dataAll.id}`} className='text-decoration-none text-dark py-5' >{dataAll.name}</Link></h4>)
+                <Link  to={`/course/${dataAll.id}`} className='text-decoration-none text-dark ' >{dataAll.name}</Link></h4>)
             }
             
         </div>
