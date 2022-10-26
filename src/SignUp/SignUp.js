@@ -16,8 +16,8 @@ providerLogin(googleProvider)
     }
     return (
         <div>
-           <button onClick={handleGoogleSignIn}>
-            sigen in with google
+           <button type="button" className="btn btn-primary" onClick={handleGoogleSignIn}>
+            sigen Up with google
            </button>
         </div>
     );
