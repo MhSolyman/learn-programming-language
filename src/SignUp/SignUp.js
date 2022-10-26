@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../Contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const { providerLogin } = useContext(AuthContext);
+    const { providerLogin ,createUser} = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
@@ -22,6 +22,11 @@ const name = form.name.value;
 const email = form.email.value;
 const password = form.password.value;
 console.log(name,password,email)
+createUser(email,password)
+.then(result=>{
+    const user =result.user;
+    console.log(user)
+}).catch(error=>console.log(error))
 
 }
 
