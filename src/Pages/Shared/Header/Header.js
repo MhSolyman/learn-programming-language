@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
-    const { user , logOut} = useContext(AuthContext);
-    const handleLogout=()=>{
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogout = () => {
         logOut()
-        .then(()=>{})
-        .catch(error=>console.error(error))
+            .then(() => { })
+            .catch(error => console.error(error))
     }
 
     return (
@@ -36,24 +36,27 @@ const Header = () => {
 
                         <p className="nav-item ">
                             {
-                                user?.uid ? <>< img  style={{height:'40px'}} src={user?.photoURL}  alt="" /> <button type="button" className="btn btn-primary" onClick={handleLogout}>Log Out</button></>: <> <div className='d-flex'><Link to={'/signUp'} className="nav-link active">Sign Up</Link><span> </span> <Link to={'/Login'} className="nav-link active">Log in</Link> </div> 
+                                user?.uid ? <>
+                                    <span>{user?.displayName
+                                    }</span>
+                                    < img style={{ height: '40px' }} src={user?.photoURL} alt="" /> <button type="button" className="btn btn-primary" onClick={handleLogout}>Log Out</button></> : <> <div className='d-flex'><Link to={'/signUp'} className="nav-link active">Sign Up</Link><span> </span> <Link to={'/Login'} className="nav-link active">Log in</Link> </div>
                                 </>
                             }
-                          
-                            
+
+
                         </p>
-                        
-                        
-                        
-                              
-                        
-                        
+
+
+
+
+
+
                         <div>
-                           
+
                         </div>
-                        
-                      
-                        
+
+
+
 
 
 
