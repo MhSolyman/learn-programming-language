@@ -2,12 +2,22 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const Course = () => {
-    const data= useLoaderData()
-    console.log(data)
+    const data = useLoaderData()
+
     return (
         <div>
-            <h1>course{data.length}</h1>
-            <img src={data.img} alt="" />
+
+
+
+
+            <div className="card" style={{ width: "18rem" }} >
+                <img src={data.img} class="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">Course Name: {data.name}</h5>
+                    <p className="card-text">{data.details}</p>
+                    <p>Time: {data.time}h</p>
+                </div>
+            </div>
         </div>
     );
 };

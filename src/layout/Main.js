@@ -12,9 +12,9 @@ const Main = () => {
         <div>
             <Header></Header>
 
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-sm-8">
+            <div className="container text-center">
+                <div className="row">
+                    <div className="col-sm-8">
                         <Outlet>
                             <Home></Home>
                             <Course></Course>
@@ -23,7 +23,7 @@ const Main = () => {
 
                     </div>
 
-                    <div class="col-sm-4">
+                    <div className="col-sm-4">
                         <Right>
 
                         </Right>
