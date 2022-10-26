@@ -1,8 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
-    
+   
+
     return (
         <div className='container'>
             <nav className="navbar navbar-expand-lg bg-light">
@@ -25,11 +28,13 @@ const Header = () => {
                                 <p className="nav-link active">Blog</p>
                             </li>
                         </ul>
+
                         <p className="nav-item">
-                                <p className="nav-link active">Blog</p>
-                            </p>
-                   
-     
+                            <Link to={'/signUp'} className="nav-link active">Sign Up</Link>
+                            
+                        </p>
+
+
 
                     </div>
                 </div>
