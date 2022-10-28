@@ -1,6 +1,10 @@
-.flx{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1%;
-   
+
+@media(min-width:600px){
+    .flx{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1%;
+       
+    }
+
 }
